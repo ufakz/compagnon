@@ -39,6 +39,7 @@ function App() {
           option={option}
           performAction={performAction}
           setInput={setInput}
+          result={result}
         />
       )}
     </div>

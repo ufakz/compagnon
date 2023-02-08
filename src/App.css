@@ -48,3 +48,10 @@
   border: 1px solid whitesmoke;
   color: whitesmoke;
 }
+
+.result-text{
+  width: 300px;
+  background-color: black;
+  padding: 1em;
+
+}

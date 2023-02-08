@@ -1,24 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
+
 #root {
+  font-family: 'Poppins', sans-serif;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.app-main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.app-input{
-  height: 2rem;
-  width: 300px;
-  margin: 20px;
-  border-radius: 6px;
-}
-
-.result-img{
-  margin-top: 20px;
-  width: 360px;
-}

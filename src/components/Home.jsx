@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function Home() {
+export default function Home({ optionsList }) {
   return (
-    <div>Home</div>
-  )
+    <>
+      <h1>Compagnon</h1>
+    </>
+  );
 }

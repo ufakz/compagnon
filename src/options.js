@@ -3,6 +3,15 @@ export const options = [
     id: "chat",
     name: "Chat",
     description: "Open ended conversation with an AI assistant",
+    options: {
+      model: "text-davinci-003",
+      temperature: 0,
+      max_tokens: 100,
+      top_p: 1,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+      stop: ["\n"],
+    },
   },
   {
     id: "qa",
@@ -27,14 +36,12 @@ export const options = [
   {
     id: "pythontonatural",
     name: "Python to natural language",
-    description:
-      "Explain a piece of Python code in human understandable language",
+    description: "Explain a piece of Python code in human readable language",
   },
   {
     id: "translatecode",
     name: "Translate programming languages",
-    description:
-      "To translate from one programming language to another we can use the comments to specify the source and target languages",
+    description: "Use the comments to specify the source and target languages",
   },
   {
     id: "explaincode",

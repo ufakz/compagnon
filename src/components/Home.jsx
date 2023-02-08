@@ -11,7 +11,7 @@ export default function Home({ optionsList, selectOption }) {
             <div
               key={option.id}
               className="grid-child"
-              onClick={() => selectOption(option.options)}
+              onClick={() => selectOption(option)}
             >
               <h3>{option.name}</h3>
               <p>{option.description}</p>

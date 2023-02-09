@@ -1,8 +1,24 @@
+export const RequestType = {
+  TEXT: "text",
+  IMAGE: "image",
+};
+
 export const options = [
+  {
+    id: "imagegen",
+    name: "Generate Image",
+    description: "Generate an image based on your prompt",
+    type: RequestType.IMAGE,
+    options: {
+      n: 1,
+      size: "1024x1024",
+    },
+  },
   {
     id: "chat",
     name: "Chat",
     description: "Open ended conversation with an AI assistant",
+    type: RequestType.TEXT,
     options: {
       model: "text-davinci-003",
       temperature: 0.9,
@@ -17,6 +33,7 @@ export const options = [
     id: "qa",
     name: "Q and A",
     description: "Answer questions based on existing knowledge",
+    type: RequestType.TEXT,
     options: {
       model: "text-davinci-003",
       temperature: 0,
@@ -31,6 +48,7 @@ export const options = [
     id: "grammar",
     name: "Grammar correction",
     description: "Corrects sentences into standard English",
+    type: RequestType.TEXT,
     options: {
       model: "text-davinci-003",
       temperature: 0,
@@ -44,6 +62,7 @@ export const options = [
     id: "summarize",
     name: "Summarize for a 2nd grader",
     description: "Translates difficult text into simpler concepts",
+    type: RequestType.TEXT,
     options: {
       model: "text-davinci-003",
       temperature: 0.7,
@@ -57,6 +76,7 @@ export const options = [
     id: "englishtoother",
     name: "English to other languages",
     description: "Translates English text into French, Spanish and Japanese",
+    type: RequestType.TEXT,
     options: {
       model: "text-davinci-003",
       temperature: 0.3,
@@ -70,6 +90,7 @@ export const options = [
     id: "pythontonatural",
     name: "Python to natural language",
     description: "Explain a piece of Python code in human readable language",
+    type: RequestType.TEXT,
     options: {
       model: "code-davinci-002",
       temperature: 0,
@@ -83,6 +104,7 @@ export const options = [
     id: "translatecode",
     name: "Translate programming languages",
     description: "Use the comments to specify the source and target languages",
+    type: RequestType.TEXT,
     options: {
       model: "code-davinci-002",
       temperature: 0,
@@ -97,6 +119,7 @@ export const options = [
     id: "explaincode",
     name: "Explain code",
     description: "Explain a complicated piece of code",
+    type: RequestType.TEXT,
     options: {
       model: "code-davinci-002",
       temperature: 0,
@@ -108,22 +131,10 @@ export const options = [
     },
   },
   {
-    id: "sqlrequest",
-    name: "SQL request",
-    description: "Create simple SQL queries",
-    options: {
-      model: "text-davinci-003",
-      temperature: 0.3,
-      max_tokens: 60,
-      top_p: 1.0,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
-    },
-  },
-  {
     id: "essayoutline",
     name: "Essay outline",
     description: "Generate an outline for a research topic",
+    type: RequestType.TEXT,
     options: {
       model: "text-davinci-003",
       temperature: 0.3,

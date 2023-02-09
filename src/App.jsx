@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 import Home from "./components/Home";
 import Input from "./components/Input";
-import { options } from "./options";
+import { options, RequestType } from "./options";
 import "./App.css";
 
 function App() {
@@ -21,11 +21,18 @@ function App() {
   };
 
   const performAction = async () => {
+    var response;
     let object = { ...option.options, prompt: input };
-
-    const response = await openai.createCompletion(object);
-
-    setResult(response.data.choices[0].text);
+    switch (option.type) {
+      case RequestType.TEXT:
+        response = await openai.createCompletion(object);
+        setResult(response.data.choices[0].text);
+        break;
+      case RequestType.IMAGE:
+        response = await openai.createImage(object);
+        setResult(response.data.data[0].url);
+        break;
+    }
   };
 
   console.log(option);

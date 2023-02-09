@@ -67,7 +67,7 @@
   font-family: 'Poppins',sans-serif;
   padding: 0.5rem;
   height: 2rem;
-  width: 300px;
+  width: 100% important;
   margin: 20px;
   border-radius: 12px;
 }
@@ -75,4 +75,20 @@
 .img-result{
   margin-top: 20px;
   width: 360px;
+}
+
+.spinner {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -15,10 +15,12 @@ function App() {
   const [option, setOption] = useState({});
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [imgLink, setImgLink] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const goBack = () => {
     setOption({});
+    setLoading(false);
   };
 
   const selectOption = (option) => {
@@ -26,6 +28,7 @@ function App() {
   };
 
   const performAction = async () => {
+    setLoading(true);
     var response;
     let object = { ...option.options, prompt: input };
     switch (option.type) {
@@ -35,9 +38,10 @@ function App() {
         break;
       case RequestType.IMAGE:
         response = await openai.createImage(object);
-        setResult(response.data.data[0].url);
+        setImgLink(response.data.data[0].url);
         break;
     }
+    setLoading(false);
   };
 
   console.log(option);
@@ -52,6 +56,7 @@ function App() {
           performAction={performAction}
           setInput={setInput}
           result={result}
+          imgLink={imgLink}
           goBack={goBack}
           loading={loading}
         />

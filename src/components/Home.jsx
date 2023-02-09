@@ -14,7 +14,7 @@ export default function Home({ optionsList, selectOption }) {
               onClick={() => selectOption(option)}
             >
               <h3>{option.name}</h3>
-              <p>{option.description}</p>
+              <p>{option.desc}</p>
             </div>
           );
         })}

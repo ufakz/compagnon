@@ -7,6 +7,7 @@ export default function Input({
   performAction,
   setInput,
   result,
+  imgLink,
   goBack,
   loading,
 }) {
@@ -27,8 +28,8 @@ export default function Input({
           <button className="action-btn" onClick={performAction}>
             {!loading ? "DO YOUR STUFF!" : <Loader className="spinner" />}
           </button>
-          {result.length > 0 ? (
-            <img className="img-result" src={result || ""} alt="image" />
+          {imgLink.length > 0 ? (
+            <img className="img-result" src={imgLink || ""} alt="image" />
           ) : (
             <></>
           )}

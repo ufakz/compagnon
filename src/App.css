@@ -63,14 +63,16 @@
   flex-flow: row;
 }
 
-.app-input{
+.img-input{
+  font-family: 'Poppins',sans-serif;
+  padding: 0.5rem;
   height: 2rem;
   width: 300px;
   margin: 20px;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
-.result-img{
+.img-result{
   margin-top: 20px;
   width: 360px;
 }

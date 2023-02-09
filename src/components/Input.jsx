@@ -1,16 +1,24 @@
 import React from "react";
 import { RequestType } from "../options";
 
-export default function Input({ option, performAction, setInput, result }) {
+export default function Input({
+  option,
+  performAction,
+  setInput,
+  result,
+  goBack,
+}) {
   return (
     <div>
-      <button className="action-btn back-btn">&#8592; Go Back</button>
+      <button className="action-btn back-btn" onClick={goBack}>
+        &#8592; Go Back
+      </button>
       {option.type == RequestType.IMAGE ? (
         <div className="input">
           <h3>{option.name}</h3>
           <p>{option.description}</p>
           <input
-            className="app-input"
+            className="img-input"
             placeholder="Enter what you want to generate"
             onChange={(e) => setInput(e.target.value)}
           />
@@ -18,7 +26,7 @@ export default function Input({ option, performAction, setInput, result }) {
             DO YOUR STUFF!
           </button>
           {result.length > 0 ? (
-            <img className="result-img" src={result || ""} alt="image" />
+            <img className="img-result" src={result || ""} alt="image" />
           ) : (
             <></>
           )}

@@ -16,6 +16,10 @@ function App() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
+  const goBack = () => {
+    setOption({});
+  };
+
   const selectOption = (option) => {
     setOption({ ...option, prompt: input });
   };
@@ -47,6 +51,7 @@ function App() {
           performAction={performAction}
           setInput={setInput}
           result={result}
+          goBack={goBack}
         />
       )}
     </div>

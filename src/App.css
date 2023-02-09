@@ -61,6 +61,7 @@
 .back-btn{
   display: flex;
   flex-flow: row;
+  margin-bottom: 2em;
 }
 
 .img-input{
@@ -68,6 +69,7 @@
   padding: 0.5rem;
   height: 2rem;
   width: 100% important;
+  min-width: 240px;
   margin: 20px;
   border-radius: 12px;
 }

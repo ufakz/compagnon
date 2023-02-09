@@ -15,6 +15,7 @@ function App() {
   const [option, setOption] = useState({});
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const goBack = () => {
     setOption({});
@@ -52,6 +53,7 @@ function App() {
           setInput={setInput}
           result={result}
           goBack={goBack}
+          loading={loading}
         />
       )}
     </div>

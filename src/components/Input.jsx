@@ -1,5 +1,6 @@
 import React from "react";
 import { RequestType } from "../options";
+import { ReactComponent as Loader } from "../assets/icons/loader.svg";
 
 export default function Input({
   option,
@@ -7,6 +8,7 @@ export default function Input({
   setInput,
   result,
   goBack,
+  loading,
 }) {
   return (
     <div>
@@ -23,7 +25,7 @@ export default function Input({
             onChange={(e) => setInput(e.target.value)}
           />
           <button className="action-btn" onClick={performAction}>
-            DO YOUR STUFF!
+            {!loading ? "DO YOUR STUFF!" : <Loader className="spinner" />}
           </button>
           {result.length > 0 ? (
             <img className="img-result" src={result || ""} alt="image" />
@@ -42,7 +44,7 @@ export default function Input({
             onChange={(e) => setInput(e.target.value)}
           ></textarea>
           <button className="action-btn" onClick={performAction}>
-            DO YOUR STUFF!
+            {!loading ? "DO YOUR STUFF!" : <Loader className="spinner" />}
           </button>
           <h3 className="result-text">{result.length > 0 ? result : ""}</h3>
         </div>

@@ -39,6 +39,7 @@
 
 .text-area{
   font-family: 'Poppins',sans-serif;
+  overflow-y: scroll;
   padding: 1rem;
   width: 100% !important;
   height: 60px !important;
@@ -53,6 +54,8 @@
 }
 
 .result-text{
+  overflow-y: scroll;
+  height: 200px;
   width: 80%;
   background-color: black;
   padding: 1em;
